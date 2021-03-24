@@ -32,9 +32,9 @@ export default new Vuex.Store({
     async removeTodo(ctx, id) {
       const response = await fetch(this.state.url + '/' + id, { method: 'DELETE' });
       const data = await response.json();
-      ctx.dispatch('getTodos', data);
+      if(data.success) {
+        ctx.dispatch('getTodos', data);
+      }
     }
-  },
-  modules: {
   }
 });

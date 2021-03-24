@@ -2,6 +2,8 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <AddTodo msg="Welcome to Your Vue.js App"/>
+    <h1>Todos</h1>
+    <p>Click on a Todo to remove it.</p>
     <Todos />
   </div>
 </template>
