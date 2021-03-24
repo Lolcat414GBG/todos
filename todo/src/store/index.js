@@ -18,10 +18,8 @@ export default new Vuex.Store({
       const response = await fetch(url, { method: 'GET' });
       const data = await response.json();
       ctx.commit('addTodos', data.todos);
-      console.log('Todos: ', data.todos);
     },
     async addTodo(ctx, todo) {
-      console.log('async: ', ctx + ' ' + todo);
       const obj = { task: todo }
       const response = await fetch('https://awesome-todo-api.herokuapp.com/tasks', 
       { method: 'POST',
@@ -30,14 +28,15 @@ export default new Vuex.Store({
       });
       const data = await response.json();
       console.log('addTodo: ', data);
+      ctx.dispatch('getTodos');
     },
-    async removeTodo(text, test) {
-      console.log('removeTodo: ', text, test);
-      const url = 'https://awesome-todo-api.herokuapp.com/tasks/' + test;
+    async removeTodo(ctx, id) {
+      console.log('removeTodo: ', ctx, id);
+      const url = 'https://awesome-todo-api.herokuapp.com/tasks/' + id;
       const response = await fetch(url, { method: 'DELETE' });
       const data = await response.json();
       console.log('ny data i removeTodo', data);
-      //getTodos();
+      ctx.dispatch('getTodos');
     }
   },
   modules: {

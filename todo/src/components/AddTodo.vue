@@ -11,9 +11,6 @@
 <script>
 export default {
   name: 'AddTodo',
-  props: {
-    
-  },
   data() {
     return {
       todo: ''

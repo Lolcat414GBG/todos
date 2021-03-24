@@ -15,7 +15,6 @@ export default {
     },
     methods: {
         removeTodo: function(task) {
-            console.log('ta bort', task)
             this.$store.dispatch('removeTodo', task);
         }
     }
