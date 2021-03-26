@@ -1,8 +1,7 @@
 <template>
   <div class="addTodo">
     <form action="" @submit.prevent="save">
-      <label for="todo">Add Todo</label>
-      <input type="text" id="todo" v-model="todo" required>
+      <input placeholder="Add Todo" type="text" v-model="todo" required>
       <button type="submit">Save Todo</button>
     </form>
   </div>
@@ -27,18 +26,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+input {
+    padding: 0.5rem;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+button {
+    border: none;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    margin-left: 1rem;
 }
 </style>
