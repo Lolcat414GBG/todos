@@ -1,7 +1,8 @@
 <template>
   <section class="todos">
       <ul>
-          <li v-for="(todo, index) in todos" v-bind:key="index" v-on:click="removeTodo(todo.id)">{{ todo.task }}</li>
+          <li v-for="(todo, index) in todos" v-bind:key="index" 
+          v-on:click="removeTodo(todo.id)">{{ todo.task }}</li>
       </ul>
   </section>
 </template>

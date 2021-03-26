@@ -19,6 +19,7 @@ export default {
   methods: {
     save: function(){
       this.$store.dispatch('addTodo', this.todo);
+      this.todo = '';
     }
   }
 }
