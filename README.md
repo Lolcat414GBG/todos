@@ -1,3 +1,3 @@
 # todos
 
-En övning i Vue
+En övning i Vue. Todo-lista
